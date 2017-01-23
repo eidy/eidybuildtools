@@ -10,7 +10,7 @@ cd $SCRIPTDIR
 BUILDROOT=$1
 if [ -z "$BUILDROOT" ]
 then
-	BUILDROOT="../build"
+	BUILDROOT=`realpath "../build"`
 	mkdir -p $BUILDROOT
 fi
 BUILDNUM=$2
