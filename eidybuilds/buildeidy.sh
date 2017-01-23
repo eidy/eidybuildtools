@@ -87,8 +87,8 @@ cp -r $BUILDROOT/TeamEidy/games $BUILDROOT/eidy
 cp -r $BUILDROOT/TeamEidy/worlds $BUILDROOT/eidy
 
 echo "Updating build properties" 
-echo "ANDROID_NDK = $NDK" > $BUILDROOT/eidy/build/android/local.properties
-echo "SDKFOLDER = $SDK" >> $BUILDROOT/eidy/build/android/local.properties
+echo "ndk.dir = $NDK" > $BUILDROOT/eidy/build/android/local.properties
+echo "sdk.dir = $SDK" >> $BUILDROOT/eidy/build/android/local.properties
 echo "" >> $BUILDROOT/eidy/build/android/local.properties
  
 
