@@ -123,6 +123,7 @@ mkdir $BUILDROOT/eidy/textures/server
 $SCRIPTDIR/buildtextures.sh $BUILDROOT/TeamEidy/textures/server $BUILDROOT/eidy/textures/base/pack
 
 echo "Reorganising sounds..."
+mkdir $BUILDROOT/eidy/$SOUNDSDIR
 $SCRIPTDIR/buildtestsounds.sh $BUILDROOT/eidy/games $BUILDROOT/eidy/$SOUNDSDIR
 
 
