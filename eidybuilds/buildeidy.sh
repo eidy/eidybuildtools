@@ -4,6 +4,9 @@
 #  a basic minetest build,  and does someworkarounds, then 
 #  initiates a normal make 
 #
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $SCRIPTDIR
+
 BUILDROOT=$1
 if [ -z "$BUILDROOT" ]
 then
@@ -18,10 +21,8 @@ fi
 BUILDIDENT='1.0.'$2
 CUSTOMDIR="../custom"
 SOUNDSDIR="sounds"
-SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 NDK=/develop/ndk
 SDK=/develop/sdk
-
 if [ -z "$MINETESTBRANCH" ]
 then
 	MINETESTBRANCH=eidy
@@ -43,13 +44,13 @@ echo "Fetching eidy"
 git clone -b $MINETESTBRANCH --single-branch https://github.com/eidy/minetest.git $BUILDROOT/eidy
 
 
-mkdir -p $BUILDROOT/TeamEidy
+mkdir -p $BUILDROOT/TeamEidy/games
 
 # Copy custom files to the working folder
 cp -r $CUSTOMDIR $BUILDROOT/TeamEidy
 
 echo "Fetching Default Minetest Game"
-git clone -b https://github.com/minetest/minetest_game $BUILDROOT/TeamEidy/games
+git clone -b $EIDYTEAMBRANCH --single-branch https://github.com/minetest/minetest_game $BUILDROOT/TeamEidy/games/minetest_game
  
 echo "Unpack TeamEidy mod packs"
 
