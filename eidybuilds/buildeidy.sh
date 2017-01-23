@@ -2,7 +2,7 @@
 #
 #  This script adds custom eidy artifacts over the top of
 #  a basic minetest build,  and does someworkarounds, then 
-#  initiates a normal make
+#  initiates a normal make 
 #
 BUILDROOT=$1
 if [ -z "$BUILDROOT" ]
