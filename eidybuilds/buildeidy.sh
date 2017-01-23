@@ -139,13 +139,13 @@ cp -f $BUILDROOT/TeamEidy/custom/minetest.android.conf $BUILDROOT/eidy/minetest.
 echo "Launching build .... go make a coffee...."
 cd $BUILDROOT/eidy/build/android
 make
-
+mv $BUILDROOT/eidy/build/android/build/outputs/apk/eidy-debug.apk $BUILDROOT/eidy/build/android/build/outputs/apk/eidy-en-debug.apk 
  
 echo "Updating minetest.conf - Swahili"
 cp -f $BUILDROOT/TeamEidy/custom/minetest.sw.android.conf $BUILDROOT/eidy/minetest.conf
 echo "Launching build .... go make a coffee...."
 cd $BUILDROOT/eidy/build/android
 make
-
+mv $BUILDROOT/eidy/build/android/build/outputs/apk/eidy-debug.apk $BUILDROOT/eidy/build/android/build/outputs/apk/eidy-sw-debug.apk 
  
  
